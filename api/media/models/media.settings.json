@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "media",
+  "info": {
+    "name": "Media"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "comment": {
+      "type": "richtext",
+      "required": false
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "required":true
+    }
+  }
+}
